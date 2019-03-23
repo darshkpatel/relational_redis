@@ -12,6 +12,7 @@ CORS(app, resources=r"*")
 def query():
     if request.method =="POST":
         query = request.form["query"]
+        print(query)
     else:
         return jsonify({"err": "Invalid parameters"})
     start = time.time()
@@ -23,4 +24,4 @@ def query():
     })
 
 
-app.run(host='0.0.0.0', port='80', debug=True)
+app.run(host='0.0.0.0', port='8080', debug=True)

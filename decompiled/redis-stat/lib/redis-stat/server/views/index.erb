@@ -53,7 +53,7 @@
                   
                   <button type="submit" id="send" class="btn btn-default">Submit</button></div>
                     </form>
-                    <div id="created"></div>
+                    <div color="red"><span color="red" id="created"></span></div>
                     </div>
                     <script>
                     
@@ -62,9 +62,10 @@
                     $.ajax({ // create an AJAX call...
                         data: "query="+query, // get the form data
                         type: "POST", // GET or POST
-                        url: "http://localhost:80/query", // the file to call
+                        url: "http://localhost:8080/query", // the file to call
                         success: function(response) { // on success..
-                           // $('#created').html(response); // update the DIV
+                           $('#created').text("Time taken for query -> "+response["time_taken"]); // update the DIV
+                           $('#created').css('color', 'red');
                             console.log(response);
       
                         }

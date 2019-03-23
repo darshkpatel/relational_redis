@@ -33,3 +33,4 @@ def load_from_db():
             redis.execute_command("REDISQL.EXEC", TABLE_NAME, statement)
         except ResponseError:
             pass
+load_from_db()

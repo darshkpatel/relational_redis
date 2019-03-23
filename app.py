@@ -1,10 +1,12 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 
 app = Flask(__name__)
 from connection import redis
 from conf import TABLE_NAME
 import time
 
+CORS(app, resources=r"*")
 
 @app.route('/query', methods=["POST"])
 def query():

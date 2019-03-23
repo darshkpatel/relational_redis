@@ -34,4 +34,6 @@ def load_from_db():
         except ResponseError:
             pass
     c.close()
+
+
 load_from_db()

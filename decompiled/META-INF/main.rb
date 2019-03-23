@@ -1,1 +1,0 @@
-load 'redis-stat/bin/redis-stat'

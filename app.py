@@ -18,12 +18,15 @@ def query():
     else:
         return jsonify({"err": "Invalid parameters"})
     start_redis = time.time()
-    redis.execute_command("REDISQL.EXEC", TABLE_NAME, query)
+    var = redis.execute_command("REDISQL.EXEC", TABLE_NAME, query)
+    print(var)
     end_redis = time.time() - start_redis
     conn = sqlite3.connect(DB_NAME)
     c = conn.cursor()
     start_sqlite = time.time()
-    c.execute(str(query))
+    rows = c.execute(str(query)).fetchall()
+    for row in rows:
+        print(row) # Printing here because sqlite uses lazy loading
     end_sqlite = time.time() - start_sqlite
 
     c.close()

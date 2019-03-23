@@ -1,2 +1,2 @@
-DB_NAME = "test_data.sqlite"
-TABLE_NAME = "customers"
+DB_NAME = "data.sqlite"
+TABLE_NAME = "test_data"

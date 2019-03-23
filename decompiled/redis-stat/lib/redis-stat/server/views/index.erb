@@ -64,7 +64,7 @@
                         type: "POST", // GET or POST
                         url: "http://localhost:8080/query", // the file to call
                         success: function(response) { // on success..
-                           $('#created').text("Time taken for query -> "+response["time_taken"]); // update the DIV
+                           $('#created').text("Time taken by redis -> "+response["time_taken_redis"]+"\nTime taken by sqlite -> "+response["time_taken_sqlite"])// update the DIV
                            $('#created').css('color', 'red');
                             console.log(response);
       

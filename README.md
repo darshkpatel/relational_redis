@@ -34,3 +34,21 @@ relational_redis plays the role of an in-memory relational database.
  #### Testing
  
  Run `bash test.sh` to test the whole project with a query.
+
+ #### Screen Grabs
+
+ ### Dashboard
+
+ ![Dashboard](snaps/dash.png)
+
+ ### A sample query
+
+ ![query](snaps/time_taken.png)
+
+ ### Redis-stat, rediSQL and python servers
+
+ ![redis-stat](snaps/redis-stat.png)
+
+ ![rediSQL](snaps/rediSQL.png)
+
+ ![python-app](snaps/python_app.png)

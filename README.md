@@ -31,3 +31,6 @@ relational_redis plays the role of an in-memory relational database.
  - Run `python app.py`
  - Visit [localhost:63790](http://localhost:63790) to see the dashboard displaying all statistics.
  
+ #### Testing
+ 
+ Run `bash test.sh` to test the whole project with a query.
